@@ -1,0 +1,44 @@
+ int Total_Sale = 0;
+
+            string[] SalsaName = new string[5] {"MILD","MEDIUM","SWEET","HOT","ZESTY"};
+            int[] Salsa_Sale = new int[5];
+            
+    
+
+            for (int i = 0; i < Salsa_Sale.Length; i++)
+            {
+                Console.WriteLine("Please enter selling Price of "+SalsaName[i]);
+                Salsa_Sale[i] = Convert.ToInt32(Console.ReadLine());
+                Total_Sale = Total_Sale + Salsa_Sale[i];
+            }
+            Console.WriteLine();
+            for (int i = 0; i <Salsa_Sale.Length; i++)
+            {
+                Console.WriteLine(SalsaName[i]+" Sell :  "+Salsa_Sale[i]);
+            }
+            
+            int Low = Salsa_Sale[0];
+            int High = Salsa_Sale[0];
+            string SalsaName_L = SalsaName[0];
+            string SalsaName_H = SalsaName[0];
+            for (int j = 0; j < Salsa_Sale.Length; j++)
+            {
+
+                if (Salsa_Sale[j] > High)
+                {
+                    High = Salsa_Sale[j];
+                    SalsaName_H = SalsaName[j];
+                }
+                if (Salsa_Sale[j] < Low)
+                {
+                    Low = Salsa_Sale[j];
+                    SalsaName_L = SalsaName[j];
+                }  
+            
+            } 
+             
+             Console.WriteLine("Total Salsa Sell : " + Total_Sale);
+             Console.WriteLine("Selling Low Product : "+Low+" OF "+SalsaName_L);
+            Console.WriteLine("Selling Hight Product : "+High+" oF "+SalsaName_H);
+
+Code Made by Code_Aspj           
